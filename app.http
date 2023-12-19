@@ -1,0 +1,44 @@
+
+//1.Register API 
+//scenario1//username already exists 
+//scenario2//Password is too short
+//scenario3//User created successfully
+###
+POST http://localhost:3001/register
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "name": "Adam Richard",
+  "password": "richard_567",
+  "gender": "male",
+  "location": "Detroit"
+}
+
+//2.Login API 
+//scenario1//Invalid user 
+//scenario2//Invalid password 
+//scenario3//Successful login   
+###
+POST http://localhost:3001/login 
+Content-Type: application/json 
+
+{
+  "username": "adam_richard",
+  "password": "richard_567"
+}
+
+
+//3.Change password API 
+//scenario1//Invalid current password 
+//scenario2//Password too short 
+//scenario3//Password updated
+###
+PUT http://localhost:3001/change-password
+Content-Type: application/json 
+
+{
+  "username": "adam_richard",
+  "oldPassword": "richard_567",
+  "newPassword": "richard@567"
+}
